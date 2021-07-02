@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ivan-1449e": {
+      "hosting": {
+        "App": [
+          "ivan-1449e"
+        ]
+      }
+    }
+  }
+}

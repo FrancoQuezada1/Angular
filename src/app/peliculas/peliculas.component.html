@@ -1,0 +1,21 @@
+<h1> Peliculas Gratis!</h1>
+<div style="width: 100vh; overflow-x: auto;">   
+    <ul style="display: inline-flex; overflow-x: auto;">
+        <li *ngFor="let Lista of Almacen" style="list-style: none; margin-right: 20px;" >
+           
+            <div>  <img
+                [src]="Lista.portada"
+                [alt]="Lista.titulo"
+                
+                > </div>
+            <div class= "descripcion">
+                <h1>Titulo:{{Lista.titulo}}</h1>
+                <p>Genero:{{Lista.genero}}</p>
+                 </div>
+            </li>   
+    </ul>
+</div>  
+
+<button routerLink="/formulario">Cargar Peliculas </button>
+
+

@@ -1,0 +1,16 @@
+<h2> Titulos</h2>
+<span class="input">Ingresa el Titulo: </span><input [(ngModel)]="titulo" type="text">
+<br>
+<h2> Portada</h2>
+<span class="input">Ingresa el URL de la Portada: </span><input [(ngModel)]="portada" type="text">
+<br>
+<h2> Generos</h2>
+<span class="input">Seleccione el genero</span>
+    <select [(ngModel)]="genero" type="text">
+        <option *ngFor="let listaPeliculas of PeliculaGenero">{{listaPeliculas}}</option>
+    </select>
+    
+    <button class="boton" (click)="addNewItem()">Guardar la peli</button>
+    
+
+    <button routerLink="/lista">Click aqui para ver las pelis</button>
