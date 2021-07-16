@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Peliculas, PeliculasService } from '../peliculas.service';
 
 @Component({
   selector: 'app-detalle',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalleComponent implements OnInit {
 
-  constructor() { }
+  //public pelicula: Peliculas
+  constructor(
+    private peliculaService: PeliculasService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    const index = this.route.snapshot.params.index;
+    //this.pelicula = this.peliculaService.getPeliculaIndex(index);
   }
 
 }
