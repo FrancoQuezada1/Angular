@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {AngularFirestore} from '@angular/fire/firestore';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +7,18 @@ import {AngularFirestore} from '@angular/fire/firestore';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'App';
+
+  public titulo = "";
 
   constructor(
-private firestore: AngularFirestore
+    private firestore: AngularFirestore,
   ) {
-  }
-    public AgregarPelicula() :void {
 
-    }
   }
+  public AgregarPelicula(): void {
+    this.firestore.collection('peliculas').add({ titulo: this.titulo });
+
+  }
+}
 
 

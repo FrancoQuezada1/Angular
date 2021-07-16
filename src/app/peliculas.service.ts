@@ -21,4 +21,8 @@ export class PeliculasService {
   public obtenerPeliculas(){
     return this.listaPelicula;
   }
-}
+  public getPeliculaIndex(index: number = 0): Peliculas {
+    return this.listaPelicula[index];
+  }  
+  }
+
